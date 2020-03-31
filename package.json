@@ -1,0 +1,18 @@
+{
+    "private": true,
+    "engines": {
+        "yarn": ">=1.17.3"
+    },
+    "name": "monorepo-example",
+    "workspaces": [
+        "applications/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "start-app1": "yarn workspace @applications.app1 start",
+        "bootstrap": "lerna clean --yes && lerna bootstrap"
+    },
+    "devDependencies": {
+        "lerna": "latest"
+    }
+}
